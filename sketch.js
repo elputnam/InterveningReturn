@@ -27,7 +27,7 @@ function setup() {
   serial.autoConnectAndOpenPreviouslyApprovedPort(serialOptions);
 
   // Add in a lil <p> element to provide messages. This is optional
-  //pHtmlMsg = createP("Click anywhere on this page to open the serial connection dialog");
+  pHtmlMsg = createP("Click anywhere on this page to open the serial connection dialog");
 }
 
 function draw() {
@@ -89,8 +89,8 @@ function mouseClicked() {
   if (!serial.isOpen()) {
     serial.connectAndOpen(null, serialOptions);
   }
-  let fs = fullscreen();
-    fullscreen(!fs);
+  // let fs = fullscreen();
+  //   fullscreen(!fs);
 }
 
 function windowResized() {
